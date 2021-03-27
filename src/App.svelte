@@ -1,6 +1,7 @@
 <script>
 	import About from './components/About.svelte';
 	import Text from './components/Text.svelte';
+	import Skills from './components/Skills.svelte';
 	import Person from './components/Person.svelte';
 	export let name;
 	export let lastName;
@@ -15,6 +16,7 @@
 <main>
 	<h1>Hello {name} {lastName}!</h1>
 	<About />
+	<Skills />
 	<Text anotherText={'Prop recibido'} />
 	<Text />
 	<!-- <Person name={data.name} lastName={data.lastName} age={data.age} /> -->
