@@ -1,17 +1,18 @@
 <script>
-	import About from './components/About.svelte';
-	import Text from './components/Text.svelte';
-	import Skills from './components/Skills.svelte';
-	import Person from './components/Person.svelte';
-import Input from './components/Input.svelte';
+	import About from "./components/About.svelte";
+	import Text from "./components/Text.svelte";
+	import Skills from "./components/Skills.svelte";
+	import Person from "./components/Person.svelte";
+	import Input from "./components/Input.svelte";
+import Photos from './components/Photos.svelte';
 	export let name;
 	export let lastName;
-	let svelteLogo = 'https://arepa.s3.amazonaws.com/svelte-logo.png';
+	let svelteLogo = "https://arepa.s3.amazonaws.com/svelte-logo.png";
 	const data = {
-		name: 'Francisco',
-		lastName: 'Calderón',
-		age: 21
-	}
+		name: "Francisco",
+		lastName: "Calderón",
+		age: 21,
+	};
 </script>
 
 <main>
@@ -19,27 +20,27 @@ import Input from './components/Input.svelte';
 	<Input />
 	<About />
 	<Skills />
-	<Text anotherText={'Prop recibido'} />
+	<Text anotherText={"Prop recibido"} />
 	<Text />
 	<Person name={data.name} lastName={data.lastName} age={data.age} />
+	<img src={svelteLogo} alt="Svelte Logo" />
 	<Person {...data} />
-	<img src={svelteLogo} alt="Svelte Logo">
-
+	<Photos />
 </main>
 
 <style>
 	/* Definir estilos globales */
-	:global(body){
+	:global(body) {
 		background-color: #f2eee2;
 		color: #0084f6;
 	}
 
 	/* Definir variables */
-	:global(:root){
+	:global(:root) {
 		--theme-color: purple;
 	}
 
-	:global(body.dark-mode){
+	:global(body.dark-mode) {
 		background-color: #1d3040;
 		color: #bfc2c7;
 	}
@@ -50,7 +51,7 @@ import Input from './components/Input.svelte';
 		margin: 0 auto;
 	}
 	main img {
-		width:30%;
+		width: 30%;
 	}
 
 	h1 {
