@@ -3,6 +3,7 @@
 	import Text from './components/Text.svelte';
 	import Skills from './components/Skills.svelte';
 	import Person from './components/Person.svelte';
+import Input from './components/Input.svelte';
 	export let name;
 	export let lastName;
 	let svelteLogo = 'https://arepa.s3.amazonaws.com/svelte-logo.png';
@@ -15,11 +16,12 @@
 
 <main>
 	<h1>Hello {name} {lastName}!</h1>
+	<Input />
 	<About />
 	<Skills />
 	<Text anotherText={'Prop recibido'} />
 	<Text />
-	<!-- <Person name={data.name} lastName={data.lastName} age={data.age} /> -->
+	<Person name={data.name} lastName={data.lastName} age={data.age} />
 	<Person {...data} />
 	<img src={svelteLogo} alt="Svelte Logo">
 
