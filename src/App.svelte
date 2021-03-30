@@ -4,7 +4,8 @@
 	import Skills from "./components/Skills.svelte";
 	import Person from "./components/Person.svelte";
 	import Input from "./components/Input.svelte";
-import Photos from './components/Photos.svelte';
+	import Photos from "./components/Photos.svelte";
+	import ButtonCount from "./components/ButtonCount.svelte";
 	export let name;
 	export let lastName;
 	let svelteLogo = "https://arepa.s3.amazonaws.com/svelte-logo.png";
@@ -20,6 +21,7 @@ import Photos from './components/Photos.svelte';
 	<Input />
 	<About />
 	<Skills />
+	<ButtonCount />
 	<Text anotherText={"Prop recibido"} />
 	<Text />
 	<Person name={data.name} lastName={data.lastName} age={data.age} />
